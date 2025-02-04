@@ -202,15 +202,12 @@ function getRectangleString(width, height) {
 
   let result = "";
 
-  // Top border
   result += "┌" + "─".repeat(width - 2) + "┐\n";
 
-  // Middle part
   for (let i = 0; i < height - 2; i++) {
     result += "│" + " ".repeat(width - 2) + "│\n";
   }
 
-  // Bottom border
   if (height > 1) {
     result += "└" + "─".repeat(width - 2) + "┘\n";
   }

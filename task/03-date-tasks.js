@@ -76,14 +76,13 @@ function isLeapYear(date) {
  *    Date(2000,1,1,10,0,0),  Date(2000,1,1,15,20,10,453)   => "05:20:10.453"
  */
 function timeSpanToString(startDate, endDate) {
-  let diff = endDate - startDate; // Разница в миллисекундах
+  let diff = endDate - startDate; 
 
   let hours = Math.floor(diff / 3600000);
   let minutes = Math.floor((diff % 3600000) / 60000);
   let seconds = Math.floor((diff % 60000) / 1000);
   let milliseconds = diff % 1000;
 
-  // Форматируем числа с ведущими нулями
   let formattedHours = String(hours).padStart(2, "0");
   let formattedMinutes = String(minutes).padStart(2, "0");
   let formattedSeconds = String(seconds).padStart(2, "0");
